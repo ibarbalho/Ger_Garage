@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	
+<head>
+	<meta charset="UTF-8"/>
+	<title>Booking</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
+	</head>
+<body>	
+
+	<nav id="navbar-example2" class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="home">Ger's Garage</a>
+	  <ul class="nav nav-pills">
+	    <li class="nav-item">
+	      <a class="nav-link" href="register">Register</a>  
+	    </li>	    
+	    <li class="nav-item">
+	      <a class="nav-link" href="login">Login</a>
+	    </li>
+	   </ul>
+	</nav>
+	
+	<div class="card-body">
+	    
+	    <h5 class="card-title col-2">Booking</h5>
+	    
+	    <form method="POST" action="booking">
+		    <div class="row">
+		    	<div class="coll">
+		    		<div class="form-group">		
+						<label for="service">Service:</label>					    
+					    <select name="service" id="service">
+						  <option value="Annual Service">Annual Service</option>
+						  <option value="Major Service">Major Service</option>
+						  <option value="Repair/Fault">Repair/Fault</option>
+						  <option value="Major Repair">Major Repair</option>
+						</select>		  	
+					</div>
+					<div class="form-group">							    
+						   <input type="date" class="form-control" id="date" name="date" placeholder="Date:">			  	
+					 </div>					
+				</div>
+				<div class="coll">
+					<div class="form-group">							    
+						   <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone:">			  	
+					 </div>		
+					<div class="form-group">			  
+					  	<label for="type">Type:</label>					    
+					    <select name="type" id="type">
+						  <option value="Small Bus">Small Bus</option>
+						  <option value="Small Van">Small Van</option>
+						  <option value="Car">Car</option>
+						  <option value="Motorbike">Motorbike</option>
+						</select>	
+					</div>
+					<div class="form-group">							  
+						<input type="text" class="form-control" id="make" name="make" placeholder="Make:">				
+					</div>
+					<div class="form-group">							  
+						<input type="text" class="form-control" id="other" name="other" placeholder="Other:">				
+					</div>
+					<div class="form-group">							  
+						<input type="text" class="form-control" id="license" name="license" placeholder="License:">				
+					</div>	
+					<div class="form-group col-2">	
+						<label for="engine">Engine:</label>					    
+						    <select name="engine" id="engine">
+							  <option value="Diesel">Diesel</option>
+							  <option value="Petrol">Petrol</option>
+							  <option value="Hybrid ">Hybrid </option>
+							  <option value="Electric">Electric</option>
+							</select>	
+					</div>
+					<div class="form-group col-2">	
+						<label for="comments">Comments:</label>
+						<textarea id="comments" name="comments" rows="4" cols="50">				
+						</textarea>
+					</div>	
+					<button type="submit" class="btn btn-primary">Register</button> 		
+				</div>
+			</div>
+		</form>
+		
+	</div>
+	
+	
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
