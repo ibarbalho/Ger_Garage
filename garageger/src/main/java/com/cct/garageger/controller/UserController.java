@@ -14,12 +14,14 @@ public class UserController {
 	
 	@Autowired
 	private UserRepository users;
-			
+	
+	//Return the page Register user
 	@RequestMapping
 	public String register() {
 		return "register";
 	}
 	
+	//Insert the data from the form into the database
 	@RequestMapping(method = RequestMethod.POST)
 	public String insertData(User user) {
 		

@@ -20,11 +20,9 @@ public class BookingController {
 		return "booking";
 	}
 	
+	//Insert data in the database
 	@RequestMapping(method = RequestMethod.POST)
 	public String insertData(Booking booking) {
-
-		booking.setDescription_problem("teste");
-		booking.setStatus("status");
 					
 		bookings.save(booking);		
 		return "booking";
